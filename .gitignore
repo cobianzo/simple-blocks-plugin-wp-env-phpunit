@@ -1,0 +1,46 @@
+# Ignore WordPress itself
+wp/
+wp-content/
+wp-includes/
+
+# Ignore logs
+logs/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore vendor
+vendor/
+
+# Ignore phpunit cache
+phpunit.xml.dist
+phpunit.xml
+
+# Ignore composer files
+composer.lock
+composer.phar
+
+# Ignore local files
+.env
+wp-env.json
+wp-env.local.json
+
+# Ignore phpstorm files
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+
+# Ignore vs code files
+.vscode/
+
+# Ignore phpstorm files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
