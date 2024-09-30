@@ -1,16 +1,9 @@
 {
-  "core": null,
-  "plugins": ["."],
-  "phpVersion": "8.0",
-  "port": 1000,
-  "testsPort": 1001,
-  "config": {
-    "WP_DEBUG_DISPLAY": true
-  },
-  "env": {
-    "development": {},
-    "tests": {
-      "port": 3000,
-      "mysqlPort": 13306
-    }
+	"$schema": "./schemas/wp-env.json",
+	"plugins": [ "." ],
+	"core": null,
+	"config": {
+		"WP_DEBUG_DISPLAY": true,
+		"WP_DEBUG": true
+	}
 }

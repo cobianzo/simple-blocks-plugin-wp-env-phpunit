@@ -13,7 +13,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.{php,phpt,php5,php4,php3}]
-indent_style = tab
+indent_style = tabst
 indent_size = 4
 
 [*.{yml,yaml}]

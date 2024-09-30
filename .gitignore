@@ -11,10 +11,11 @@ node_modules/
 
 # Ignore vendor
 vendor/
+wordpress/
 
 # Ignore phpunit cache
-phpunit.xml.dist
-phpunit.xml
+#phpunit.xml.dist
+#phpunit.xml
 
 # Ignore composer files
 composer.lock
@@ -22,8 +23,8 @@ composer.phar
 
 # Ignore local files
 .env
-wp-env.json
-wp-env.local.json
+#wp-env.json
+#wp-env.local.json
 
 # Ignore phpstorm files
 .idea/
@@ -44,3 +45,4 @@ wp-env.local.json
 ehthumbs.db
 Thumbs.db
 desktop.ini
+

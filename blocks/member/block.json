@@ -1,0 +1,19 @@
+{
+	"name": "coco/member",
+	"title": "Member Block",
+	"category": "widgets",
+	"description": "A random demo block for creating a card of a member",
+	"icon": "admin-page",
+	"textdomain": "coco",
+	"apiVersion": 3,
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"version": "0.1.0",
+	"supports": {
+		"html": false,
+		"jsx": true
+	},
+	"editorScript": "file:../build/member-block.js",
+	"editorStyle": "file:../build/member-block.css",
+	"style": "file:../build/style-member.css",
+	"render": "file:./member-block-render.php"
+}
