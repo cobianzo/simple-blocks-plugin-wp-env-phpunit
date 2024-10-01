@@ -13,12 +13,17 @@
 		"roots/wordpress": "^6.0"
 	},
 	"require-dev": {
+		"automattic/vipwpcs": "^3.0",
 		"phpunit/phpunit": "^9.0",
 		"wp-phpunit/wp-phpunit": "^6.0",
 		"yoast/phpunit-polyfills": "^1.0"
 	},
 	"scripts": {
-		"test": "phpunit"
+		"test": "./vendor/bin/phpunit",
+		"test:watch": "./vendor/bin/phpunit-watcher watch < /dev/tty",
+		"format": "./vendor/bin/phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+		"lint": "./vendor/bin/phpcs --standard=.phpcs.xml.dist",
+		"todelete": "./vendor/bin/phpcs --standard=.phpcs.xml.dist blocks/init.php"
 	},
 	"config": {
 		"platform": {
@@ -26,7 +31,8 @@
 		},
 		"sort-packages": true,
 		"allow-plugins": {
-			"roots/wordpress-core-installer": true
+			"roots/wordpress-core-installer": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	}
 }

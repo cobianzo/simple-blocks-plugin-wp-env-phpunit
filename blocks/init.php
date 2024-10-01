@@ -1,5 +1,8 @@
 <?php
-
-// Call all the blocks entry point in PHP
+/**
+ * Initializes the blocks.
+ *
+ * @package Coco\Blocks
+ */
 
 require __DIR__ . '/member/class-member-block.php';

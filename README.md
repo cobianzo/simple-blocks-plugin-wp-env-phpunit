@@ -5,7 +5,14 @@ Boilerplate for a plugin development for creating serveral blocks using wp-env.
 Uses wp-scripts and it's modified to accept more than one block in the folder /blocks
 Setup supports phpunit.
 
-Linting (css and js, php is up to you) is already setup and working in package.json. You need the extensions in VSCode
+Linting (css and js, php) is already setup and working in package.json. You need the extensions in VSCode
+
+Summary: clone it, `npm i`, `composer i`, `npm up`, go to `localhost:8888`, `npm start`, code !
+
+Confirm that eslint work in a .js file (automatically with vscode on save and `npm run lint:js`),
+stylelint works in a css file (automatically with vscode on save and `npm run lint:css`),
+phpcs works in a php file (automatically with vscode using _Format document_ and `phpcs`/`phpcbf`),
+or use `composer lint`, `composer format`.
 
 # Environment for development wp-env + phpunit
 
@@ -91,6 +98,14 @@ https://github.com/WordPress/gutenberg/blob/trunk/
 
 `wp-env run tests-cli wp shell`
 
+**VSCode Userful Extensions**
+
+-   EditorConfig for VSCode
+-   Prettier
+-   PHP Sniffer & Beautifier
+-   phpcbf
+-   Stylelint
+
 **Linting**
 
 Remember using node 18 to ensure that npm packages are instaled correctly.
@@ -103,3 +118,8 @@ If not, check that at least they are manually:
 In VSCode, sometimes you'll need to add the setting in your workspace:
 
 `"prettier.prettierPath": "./node_modules/prettier",`
+
+**PHP Linting (Code Sniffer and Beautfier, PHPCS, and PHPCBF)**
+
+If you have phpcs and phpcbf installed globally, you might prefer removing the composer package and
+change the "scripts" key in composer.json to "phpcs" instead of "./vendor/bin/phpcs"

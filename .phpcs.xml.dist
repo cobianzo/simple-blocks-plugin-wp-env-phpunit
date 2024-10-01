@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress VIP Coding Standards">
+    <description>PHP_CodeSniffer configuration for WordPress VIP</description>
+
+    <!-- Include the main WordPress VIP coding standard -->
+    <rule ref="WordPress-VIP-Go"/>
+
+    <!-- Optional: Include additional standards -->
+    <rule ref="WordPress-Extra"/>
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Exclude specific patterns -->
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>assets/*</exclude-pattern>
+
+    <!-- Add any custom rules or exclusions here -->
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array">
+                <element value="your_prefix"/>
+                <!-- Change this to your project's prefix -->
+            </property>
+        </properties>
+    </rule>
+
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="your_text_domain"/>
+                <!-- Change this to your project's text domain -->
+            </property>
+        </properties>
+    </rule>
+
+</ruleset>

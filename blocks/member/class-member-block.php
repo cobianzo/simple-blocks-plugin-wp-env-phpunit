@@ -2,6 +2,9 @@
 
 namespace Coco\Blocks;
 
+/**
+ * Define the class for the block
+ */
 class Member_Block {
 
 	/**
@@ -10,9 +13,14 @@ class Member_Block {
 	 * @return void
 	 */
 	public static function init() {
-		add_action( 'init', [ __CLASS__, 'register_block' ] );
+		add_action( 'init', array( __CLASS__, 'register_block' ) );
 	}
 
+	/**
+	 * Register the block using block.json
+	 *
+	 * @return void
+	 */
 	public static function register_block() {
 		register_block_type( __DIR__ );
 	}
