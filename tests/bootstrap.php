@@ -11,7 +11,7 @@ require_once getenv( 'WP_PHPUNIT__DIR' ) . '/includes/functions.php';
 
 tests_add_filter(
 	'muplugins_loaded',
-	function() {
+	function () {
 		// test set up, plugin activation, etc.
 	}
 );

@@ -1,10 +1,14 @@
 <?php
-
-namespace Coco\Blocks;
-
 /**
  * Define the class for the block
+ * @package coco-plugin
  */
+
+namespace CocoPlugin\Blocks;
+
+/**
+ * The starting class
+*/
 class Member_Block {
 
 	/**

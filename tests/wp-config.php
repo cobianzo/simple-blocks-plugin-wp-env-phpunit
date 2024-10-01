@@ -1,5 +1,5 @@
 <?php
-
+// phpcs:disable
 /* Path to the WordPress codebase you'd like to test. Add a forward slash in the end. */
 define( 'ABSPATH', dirname( dirname( __FILE__ ) ) . '/wordpress/' );
 
@@ -48,3 +48,6 @@ define( 'WP_TESTS_TITLE', 'Test Blog' );
 define( 'WP_PHP_BINARY', 'php' );
 
 define( 'WPLANG', '' );
+
+
+// phpcs:enable

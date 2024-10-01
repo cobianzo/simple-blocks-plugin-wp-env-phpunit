@@ -100,11 +100,12 @@ https://github.com/WordPress/gutenberg/blob/trunk/
 
 **VSCode Userful Extensions**
 
--   EditorConfig for VSCode
--   Prettier
+-   EditorConfig for VSCode (applies rules in .editorconfig)
+-   Prettier (applies to css and js, and even json, md etc files)
 -   PHP Sniffer & Beautifier
--   phpcbf
--   Stylelint
+-   phpcbf (see below for terminal instructions for php cs and fix)
+-   Stylelint ()
+-   Eslint (help while writing, complemented by `npm run lint:js .`)
 
 **Linting**
 
@@ -113,7 +114,7 @@ Prettier might fail, so make sure it works by editing a js file, with the save o
 and confirming that the errors are corrected on save.
 If not, check that at least they are manually:
 
-`npx prettier --write .` , and with `npm run lint:js --fix`
+`npx prettier --write .` , and with `npm run lint:js -- --fix`
 
 In VSCode, sometimes you'll need to add the setting in your workspace:
 
@@ -123,3 +124,33 @@ In VSCode, sometimes you'll need to add the setting in your workspace:
 
 If you have phpcs and phpcbf installed globally, you might prefer removing the composer package and
 change the "scripts" key in composer.json to "phpcs" instead of "./vendor/bin/phpcs"
+
+Best thing is to run `composer lint .` often, and `composer format .`
+
+**Tips**
+
+Create shortcuts in your zsh terminal for
+
+```
+# shortcuts composer and
+alias c='composer'
+alias cl='composer lint'
+alias cf='composer format'
+alias ct='composer test'
+# npm linting in some projects of gb
+alias esl='npm run lint:js'
+alias esfix='npm run lint:js -- --fix'
+alias stl='npm run lint:css'
+alias stfix='npm run lint:css -- --fix'
+```
+
+so fromtime to time you can make a full lint of everything:
+`cl;esl;stl;`
+and fix it with
+`cf`
+`esfix`
+`stfix`
+
+> There is still an incongruence to be fixed between Prettier and stylelint. For example,
+> if you write a comment inside a selector and a rule, prettier removes empty lines, but stylelint
+> asks you to set a new empty line before the comment
